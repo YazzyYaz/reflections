@@ -1,0 +1,8 @@
+What happens when you initialize a repository? Why do you need to do it?
+
+Git creates a .git hidden file to begin version controlling that directory, making the repository. You need to initialize git in that directory in order to begin version controlling your workflow.
+
+
+How is the staging area different from the working directory and the repository? What value do you think it offers?
+
+It allows you to control what you want to commit. For example, let's say you want to commit changes you've made in multiple files, for different functions. It's better to add some files related to each other to staging are and commit them, and then add other files connected in a different way altogether and commit those later.
