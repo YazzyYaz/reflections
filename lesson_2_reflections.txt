@@ -30,3 +30,16 @@ git log --graph --oneline "master-branch" "other branch"
 How do the diagrams help you visualize the branch structure?
 
 Because it helps you understand where your commits are, who their parents are, and any branches that go away from the master branch and form their own commits on their own.
+
+git show commit_id			helps you compare a commit to its parent
+
+
+git checkout branch1     helps you switch from one branch to another
+
+if you want to merge another branch into your first branch, just type:
+ git merge branch2		, which merges branch2 into branch1 (which you checked out to)
+
+
+What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
+
+Merging two branches allows us to combine the code of the two branches into one. One thing to consider is if one branch has deleted something that was present before in the previous commit (before it branched) and the other one (branch2) kept that code, then the code that was deleted in branch1 will remain deleted when the two branches merge (even if branch2 kept it). this helps with making sure the merge doesn't introduce bugs.
