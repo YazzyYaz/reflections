@@ -18,3 +18,8 @@ git reset --hard   resets any changes in working directory or staging area.
 How can you use the staging area to make sure you have one commit per logical change?
 
 In the staging area, you add the files you want for the logical change you have made, even though you have been working with other files. That way, you prepare the files for the logical change to be committed under a message, while later on staging other files for other logical changes.
+
+
+What are some situations when branches would be helpful in keeping your history organized? How would branches help?
+
+Branches would be helpful when I want to explore a bug found in a current version, look at where that bug was made, branch out on that commit, fix that bug, then merge it back to the most recent version of the commit repository. Branches help me play around with experimental features and other things while keeping my main repository organized and unaffected.
