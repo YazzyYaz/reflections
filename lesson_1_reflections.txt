@@ -1,0 +1,63 @@
+How did viewing a diff between two versions of a file help you see the bug that was introduced?
+
+Very useful for quickly finding the differences between two similar files. It helps if you have a bug in your code and 
+you don't know where to look.
+
+diff		#finding the differences between two files (use diff -u 'file_1.file' 'file_2.file')
+
+
+How could having easy access to the entire history of a file make you a more efficient programmer in the long term?
+
+It helps me be able to compare any version I created, having older versions for revision, and being able to see the history of the
+code development.
+
+Commit: Is used to for any changes made to a file before saving it's version, including adding a new message about what has changed
+since the previous version. Kinda like a comment.
+
+diff operates on two different commits, commits are part of git, git is a type of version control.
+
+
+##########
+NOTE:
+
+Since you can choose when to make a commit, you might be wondering how often to commit your changes. It's usually a good idea to keep commits small. As the diff between two versions gets bigger, it gets harder to understand and less useful. However, you don’t want to make your commits too small either. If you always save a commit every time you change a line of code, your history will be harder to read since it will have a huge number of commits over a short time period.
+
+A good rule of thumb is to make one commit per logical change. For example, if you fixed a typo, then fixed a bug in a separate part of the file, you should use one commit for each change since they are logically separate. If you do this, each commit will have one purpose that can be easily understood. Git allows you to write a short message explaining what was changed in each commit, and that message will be more useful if each commit has a single logical change.
+###########
+
+
+What do you think are the pros and cons of manually choosing when to create a commit, like you do in Git, vs having versions automatically saved, like Google Docs does?
+
+It helps you reflect logical changes in your code that can be easy to review later when you encounter bugs or problems or trying to 
+see what has been done before. Logical changes are the best things to commit.
+
+
+GIT LOG
+
+Helps you see all the commit changes being made over the past for version controlling.
+
+
+Why do you think some version control systems, like Git, allow saving multiple files in one commit, while others, like Google Docs, treat each file separately?
+
+It's better because files are more interconnected in coding, while in documents, files may be related, but it's not really needed to
+track changes in all them at the same time and more reasonable to do it separately.
+
+
+git --version  			helps you know which version of git is installed.
+
+
+
+How can you use the commands git log and git diff to view the history of files?
+
+using log helps keep track of all file changes happening for the code structure by chronological order and the ID of each commit, which 
+makes it seem like a token, a very helpful feature indeed. git diff helps us see what difference are between two different commits to
+understand why a commit has been made in the first place.
+
+How might using version control make you more confident to make changes that could break something?
+
+Using version control helps revert back to previous changes in case something gets broken when we make a new change.
+
+
+Now that you have your workspace set up, what do you want to try using Git for?
+
+I'll be using git for version controlling all my code.
