@@ -1,51 +1,75 @@
-What happens when you initialize a repository? Why do you need to do it?
+Q1) What happens when you initialize a repository? Why do you need to do it?
 
-Git creates a .git hidden file to begin version controlling that directory, making the repository. You need to initialize git in that directory in order to begin version controlling your workflow.
-
-
-How is the staging area different from the working directory and the repository? What value do you think it offers?
-
-It allows you to control what you want to commit. For example, let's say you want to commit changes you've made in multiple files, for different functions. It's better to add some files related to each other to staging are and commit them, and then add other files connected in a different way altogether and commit those later.
+Git creates a .git hidden file to begin version controlling that directory, making the repository.
+You need to initialize git in that directory in order to begin version controlling your workflow.
 
 
-git diff 'file_old' 'file_new' helps finding difference between two COMMITS!
-git diff on it's own finds the difference between working directory and staging area.
-git diff --staged finds difference between staging area and commit repository
+Q2) How is the staging area different from the working directory and the repository? What value do
+you think it offers?
 
-git reset --hard   resets any changes in working directory or staging area.
-
-
-How can you use the staging area to make sure you have one commit per logical change?
-
-In the staging area, you add the files you want for the logical change you have made, even though you have been working with other files. That way, you prepare the files for the logical change to be committed under a message, while later on staging other files for other logical changes.
+It allows you to control what you want to commit. For example, let's say you want to commit changes
+you've made in multiple files, for different functions. It's better to add some files related to each
+other to staging are and commit them, and then add other files connected in a different way
+altogether and commit those later.
 
 
-What are some situations when branches would be helpful in keeping your history organized? How would branches help?
+# CODE INSTRUCTION #
 
-Branches would be helpful when I want to explore a bug found in a current version, look at where that bug was made, branch out on that commit, fix that bug, then merge it back to the most recent version of the commit repository. Branches help me play around with experimental features and other things while keeping my main repository organized and unaffected.
+git diff 'file_old' 'file_new'	helps finding difference between two COMMITS!
+git diff 	on it's own finds the difference between working directory and staging area.
+git diff --staged 	finds difference between staging area and commit repository
+git reset --hard 	resets any changes in working directory or staging area.
+
+
+Q3) How can you use the staging area to make sure you have one commit per logical change?
+
+In the staging area, you add the files you want for the logical change you have made, even though
+you have been working with other files. That way, you prepare the files for the logical change to
+be committed under a message, while later on staging other files for other logical changes.
+
+
+Q4) What are some situations when branches would be helpful in keeping your history organized?
+How would branches help?
+
+Branches would be helpful when I want to explore a bug found in a current version, look at where
+that bug was made, branch out on that commit, fix that bug, then merge it back to the most recent
+version of the commit repository. Branches help me play around with experimental features and
+other things while keeping my main repository organized and unaffected.
+
+
+# CODE INSTRUCTION #
 
 git log --graph --oneline "master-branch" "other branch"
 
 
-How do the diagrams help you visualize the branch structure?
+Q5) How do the diagrams help you visualize the branch structure?
 
-Because it helps you understand where your commits are, who their parents are, and any branches that go away from the master branch and form their own commits on their own.
-
-git show commit_id			helps you compare a commit to its parent
-
-
-git checkout branch1     helps you switch from one branch to another
-
-if you want to merge another branch into your first branch, just type:
- git merge branch2		, which merges branch2 into branch1 (which you checked out to)
+Because it helps you understand where your commits are, who their parents are, and any
+branches that go away from the master branch and form their own commits on their own.
 
 
-What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
+# CODE INSTRUCTION #
 
-Merging two branches allows us to combine the code of the two branches into one. One thing to consider is if one branch has deleted something that was present before in the previous commit (before it branched) and the other one (branch2) kept that code, then the code that was deleted in branch1 will remain deleted when the two branches merge (even if branch2 kept it). this helps with making sure the merge doesn't introduce bugs.
+git show commit_id 		helps you compare a commit to its parent
+git checkout branch1 	helps you switch from one branch to another
+
+If you want to merge another branch into your first branch, just type:
+git merge branch2	Which merges branch2 into branch1 (which you checked out to)
 
 
+Q6) What is the result of merging two branches together? Why do we represent it in the diagram
+the way we do?
 
-What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
+Merging two branches allows us to combine the code of the two branches into one. One thing to
+consider is if one branch has deleted something that was present before in the previous commit
+(before it branched) and the other one (branch2) kept that code, then the code that was deleted
+in branch1 will remain deleted when the two branches merge (even if branch2 kept it). this helps
+with making sure the merge doesn't introduce bugs.
 
-With Git's auto-merge, pros are that you can easily merge different branches to faster code updates and improvements, cons are that Git doesn't know always how best to merge show it'll have to ask for your input. Merge manually pros are that you have a better understanding of how best to merge two branches, cons are that it'll take longer to do so.
+
+Q7) What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
+
+With Git's auto-merge, pros are that you can easily merge different branches to faster code updates
+and improvements, cons are that Git doesn't know always how best to merge show it'll have to ask for
+your input. Merge manually pros are that you have a better understanding of how best to merge two
+branches, cons are that it'll take longer to do so.
