@@ -43,3 +43,9 @@ if you want to merge another branch into your first branch, just type:
 What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
 
 Merging two branches allows us to combine the code of the two branches into one. One thing to consider is if one branch has deleted something that was present before in the previous commit (before it branched) and the other one (branch2) kept that code, then the code that was deleted in branch1 will remain deleted when the two branches merge (even if branch2 kept it). this helps with making sure the merge doesn't introduce bugs.
+
+
+
+What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
+
+With Git's auto-merge, pros are that you can easily merge different branches to faster code updates and improvements, cons are that Git doesn't know always how best to merge show it'll have to ask for your input. Merge manually pros are that you have a better understanding of how best to merge two branches, cons are that it'll take longer to do so.
