@@ -55,3 +55,20 @@ repository. I can then Branch on master in my local if I want to do experimental
 # CODE INSTRUCTION #
 
 git pull origin master 		= git fetch origin 		Followed by: git merge master origin/master
+git branch -a 	Shows you which branch you're on and the other branches available
+
+
+Q4) What is the benefit of having a copy of the last known state of the remote stored locally?
+
+It helps you keep the most recent version of the commit in your local directory to be able to work on
+when there is no internet connection, and that way, if since you were offline, changes have been made to the
+remote repository, you can easily fetch and merge the new updates into your local directory when you have
+internet connection again.
+
+Q5) How would you collaborate without using Git or GitHub? What would be easier, and what
+would be harder?
+
+You'd have to e-mail each other with code changes, have lots of different versions of the code, have to go
+back and forth between each other, and store everything on a Google Docs page or another shared
+document. It wouldn't be easier at all to collaborate on code without Git or GitHub, especially
+since you lose the value of having version-control and being able to merge different code structures together.
