@@ -17,3 +17,15 @@ the remote branch. Furthermore, by adding files directly on the remote branch, y
 want to not pull them automatically and have to do some changes to them before pulling them.
 Having that control of not automatically being synchronized with remote gives you more control
 over your local working directory and protects it from information being lost in synchronization.
+
+
+### NOTES ###
+
+git remote add 'branch-name' 'https link' 	Adds a remote branch to your working directory. Branch Name
+should be called 'origin'. HTTPS Link will be found when you create a remote repository in github.
+
+git push 'remote-branch-name' 'local-branch-name'	Pushes local changes to remote repository.
+'remote-branch-name' is actually 'origin'. 'local-branch-name' is 'master'
+
+git pull 'remote-branch-name' 'local-branch-name'	Pulls remote change to local repository.
+'remote-branch-name' is actually 'origin'. 'local-branch-name' is 'master'
