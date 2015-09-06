@@ -24,23 +24,34 @@ over your local working directory and protects it from information being lost in
 git remote add 'branch-name' 'https link' 	Adds a remote branch to your working directory. Branch Name
 should be called 'origin'. HTTPS Link will be found when you create a remote repository in github.
 
-git push 'remote-branch-name' 'local-branch-name'	Pushes local changes to remote repository.
+git push 'remote-branch-name' 'local-branch-name'	Pushes local changes to
+remote repository.
 'remote-branch-name' is actually 'origin'. 'local-branch-name' is 'master'
 
-git pull 'remote-branch-name' 'local-branch-name'	Pulls remote change to local repository.
+git pull 'remote-branch-name' 'local-branch-name'	Pulls remote change to
+local repository.
 'remote-branch-name' is actually 'origin'. 'local-branch-name' is 'master'
 
-git clone 'https-link' 		Clones a remote repository to your local directory. It also points to the remote
+git clone 'https-link' 		Clones a remote repository to your local directory.
+It also points to the remote
 repository automatically when you do so.
+
+#############
+
 
 
 Q3) Describe the differences between forks, clones, and branches. When would you use one
 instead of another?
 
-Clones are used to clone a remote repository into your local directory, or clone one local directory to another.
-Forks are clones on Github's servers to clone between remote repositories while attributing the original
-repository that was forked from in the first place. Branches are different versions of a master repository that
-used to make changes while keeping the master the same way it is. I use forks when cloning another
-person's github repository, I clone it to my local machine when I want to edit it locally,
-I can push the changes back to my remote repository. I can then Branch on master in my local if
-I want to do experimental features.
+Clones are used to clone a remote repository into your local directory, or clone one
+local directory to another. Forks are clones on Github's servers to clone between remote
+repositories while attributing the original repository that was forked from in the first place.
+Branches are different versions of a master repository that used to make changes while keeping
+the master the same way it is. I use forks when cloning another person's github repository, I clone
+it to my local machine when I want to edit it locally, I can push the changes back to my remote
+repository. I can then Branch on master in my local if I want to do experimental features.
+
+
+# CODE INSTRUCTION #
+
+git pull origin master 		= git fetch origin 		Followed by: git merge master origin/master
