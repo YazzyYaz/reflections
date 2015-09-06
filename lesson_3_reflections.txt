@@ -72,3 +72,23 @@ You'd have to e-mail each other with code changes, have lots of different versio
 back and forth between each other, and store everything on a Google Docs page or another shared
 document. It wouldn't be easier at all to collaborate on code without Git or GitHub, especially
 since you lose the value of having version-control and being able to merge different code structures together.
+
+
+Q6) You just saw that the workflow when making changes in a separate branch is more complicated than
+working directly in master, especially when you need to stay up-to-date with changes others are
+making. Rather than simply pulling and pushing, you need to pull changes into your local master
+branch, merge the local master into your branch (different-oil, in our case), then push your
+branch to the remote before finally merging your branch into master, either locally or on GitHub.
+* When would you want to make changes in a separate branch rather than directly in master?
+What benefits does each approach have?
+
+You make changes in a different branch when you are working on a code repository with other collaborators
+and you want to organize everything as a team so there is a notification when there is a request for
+changes and merges and pull-requests. For instance, if there are two different branches to the master
+repository made by two different people, one will be sending a merge request to the master branch, which
+notifies others of the pull-request and see if they agree or not, but then, if the other person has then
+merged their branch into master before accepting the pull-request from the other person, then the person
+making the request must pull changes in the new master, merge master into their own branch, update the code
+to reflect the new changes, upload their branch, and then request the pull-request for a new merge. It keeps
+things clean, even though it's more complicated, but helps everyone stay on top of things with notifications
+and a timestamp and roadmap of changes and requests to things happening.
